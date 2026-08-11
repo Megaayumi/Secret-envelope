@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu 💌</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SCREEN 1
+    ========================== -->
+
+    <section class="screen active" id="screen1">
+
+        <div class="card">
+
+            <div class="floating-heart">♥</div>
+
+            <h1>Kamu mau baca ini?</h1>
+
+            <p class="subtitle">
+                Ada sesuatu yang mau aku kasih tahu.
+            </p>
+
+            <div class="button-group">
+
+                <button
+                    class="choice-btn"
+                    onclick="goToNameScreen()">
+                    Iya
+                </button>
+
+                <button
+                    class="choice-btn excited"
+                    onclick="goToNameScreen()">
+                    IYA MAU BANGED!!
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 2
+    ========================== -->
+
+    <section class="screen" id="screen2">
+
+        <div class="card name-card">
+
+            <div class="emoji">👀</div>
+
+            <h1>Sebelum itu...</h1>
+
+            <p>
+                Boleh kasih tahu nama lengkap kamu?
+            </p>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Nama lengkap kamu..."
+                autocomplete="off"
+            >
+
+            <button
+                class="main-btn"
+                onclick="submitName()">
+                ENTER ✨
+            </button>
+
+            <p
+                class="error"
+                id="nameError">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 3
+         ENVELOPE
+    ========================== -->
+
+    <section class="screen" id="screen3">
+
+        <div class="card envelope-container">
+
+            <h2 id="envelopeTitle">
+                Ada surat untukmu...
+            </h2>
+
+            <p id="clickInstruction">
+                Klik amplop ini 10 kali untuk membukanya.
+            </p>
+
+
+            <div
+                class="envelope"
+                id="envelope"
+                onclick="openLetter()">
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-paper">
+                    💌
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+            </div>
+
+
+            <div
+                class="click-counter"
+                id="clickCounter">
+                0 / 10
+            </div>
+
+
+            <button
+                class="next-btn hidden"
+                id="letterNextBtn"
+                onclick="goToLetter()">
+                BUKA SURAT 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 4
+         LETTER
+    ========================== -->
+
+    <section class="screen" id="screen4">
+
+        <div class="letter-container">
+
+            <div class="real-letter">
+
+                <div class="letter-decoration">
+                    ✦
+                </div>
+
+
+                <h2>
+                    Untuk
+                    <span id="receiverName">
+                        Kamu
+                    </span>
+                </h2>
+
+
+                <div class="letter-content">
+
+                    <p>
+                        Hai. Sebelumnya hargain dulu plis udah mau
+                        mampus ngerjain ginian doang dari program
+                        sampe ke web nya.
+                    </p>
+
+
+                    <p>
+                        Nah, jadi buat kamu yang baca ini, makasih yak
+                        udah mau jadi temenku. Iya kadang aku emang
+                        ngeselin tapi kamu juga gitu kok hehe.
+                    </p>
+
+
+                    <p>
+                        Aku juga mau bilang, tetaplah berteman samaku
+                        hingga kamu menempati 'Titik Tertinggi' di
+                        hatiku. Which is adalah titik yang sejauh ini
+                        masih 2 orang yang pernah menempatinya.
+                    </p>
+
+
+                    <p>
+                        Titik dimana aku bahkan gabisa merasa seseorang
+                        itu hanya sekedar teman melainkan seorang
+                        saudaraku.
+                    </p>
+
+
+                    <p class="emotional">
+                        Percayalah, jika kamu menempatinya, aku gaakan
+                        berhenti menyayangimu.
+                    </p>
+
+
+                    <p>
+                        Bahkan jika suatu saat hubungan kita renggang,
+                        atau ada masalah, aku gaakan pernah
+                        menganggapmu musuh.
+                    </p>
+
+
+                    <p class="signature">
+                        Ada pantun dikit,
+                        'Abdulsalam makan paku,
+                        Selamat malam dan Arigatou!'
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="main-btn next-screen-btn"
+                onclick="goToFinal()">
+                Lanjut ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 5
+         FINAL
+    ========================== -->
+
+    <section class="screen" id="screen5">
+
+        <div class="card final-card">
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+
+            <h1>
+                Terakhir...
+            </h1>
+
+
+            <p class="subtitle">
+                Kamu senang dapat surat ini?
+            </p>
+
+
+            <button
+                class="question-btn"
+                id="questionButton"
+                onclick="answerQuestion()">
+                Iya 🥹
+            </button>
+
+
+            <div
+                class="final-answer"
+                id="finalAnswer">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="Script.js"></script>
+
+</body>
+</html>
